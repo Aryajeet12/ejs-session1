@@ -6,14 +6,12 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Dashboard</h1>
-    <% if (user) { %>
-<p>Hello <%= user.name %></p>
-    <% } %>
+    <h2>Product List</h2>
     <ol>
-        <% users.forEach(user=>{ %>
-           <li><%= user.name %>-<%= user.email %>-<%= user.role %></li>
+    <% products.forEach(product=>{ %>
+
+<li><%= product.name %>-<%= product.price %></li>
         <% }) %>
-    </ol>
+        </ol>
 </body>
 </html>

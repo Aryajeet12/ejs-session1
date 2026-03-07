@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+<link rel="stylesheet" href="/css/styles.css">
+  </head>
+  <body>
+    <div class="header">
+      <div><h1 >My Application</h1></div>
+      <div>
+
+        <% if (user) { %>
+               <a href="/">Home</a>
+            <% if (user.role === "admin") { %>
+<a href="/products">Products</a>
+            <% } %>
+         
+        <a href="/logout">Logout</a>
+        <% } else { %>
+         <a href="/login">Login</a>
+        <% } %>
+    </div>
+    </div>
+    <div><%- body %></div>
+    <div class="footer">&copy; 2026. All rights reserved.</div>
+
+  </body>
+</html>
